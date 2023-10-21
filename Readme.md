@@ -8,6 +8,13 @@ This folder contains the decompiled source code of Ravenfield Beta 5. Ravenfield
 
 ![7U6aJU](https://github.com/JonJon565/Ravenfield_Beta_5_Decomp/assets/97921266/a7d3da4e-af32-48d3-8321-e1c28bd53771)
 
+
+## [Ravenfield Beta 3 Decompilation](https://github.com/JonJon565/Ravenfield_Beta_3_Decomp)
+
+In this folder, you can find the decompiled source code of Ravenfield Beta 3. Dive into the early version of the game and see how it evolved over time. The decompiled code provides insights into the development process and features implemented in this specific version. Visit the [Ravenfield Beta 3 website](https://steelraven7.itch.io/ravenfield-beta-3-old-game-version?secret=C2Jwn6nFFBVNLANgtJGGx3OF4) for more information.
+
+![F7DpVU](https://github.com/JonJon565/Ravenfield_Beta_5_Decomp/assets/97921266/80343496-6e19-4e96-be40-99b589869cf6)
+
 ## [Ravenfield Beta 2 Decompilation](https://github.com/JonJon565/Ravenfield_Beta_2_Decomp)
 
 In this folder, you can find the decompiled source code of Ravenfield Beta 2. Dive into the early version of the game and see how it evolved over time. The decompiled code provides insights into the development process and features implemented in this specific version. Visit the [Ravenfield Beta 2 website](https://steelraven7.itch.io/ravenfield-beta-3-old-game-version?secret=C2Jwn6nFFBVNLANgtJGGx3OF4) for more information.
