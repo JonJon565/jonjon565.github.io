@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EquiRectangularCubeTexture Skybox</title>
+    <script src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+    <canvas id="renderCanvas" width=700 height=500></canvas>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const canvas = document.getElementById("renderCanvas");
+            const engine = new BABYLON.Engine(canvas, true);
+
+            const createScene = function () {
+                const scene = new BABYLON.Scene(engine);
+                const camera = new BABYLON.ArcRotateCamera("camera", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
+                camera.attachControl(canvas, true);
+                const equiRectangularTexture = new BABYLON.EquiRectangularCubeTexture(
+                    "https://raw.githubusercontent.com/HarryGifford/special-relativity/0289ed237892a9c7e2cc2ec06e04f05fadfeb519/static/space/starmap_2020.jpg", // Replace with your equirectangular image path
+                    scene,
+                    2048,
+                    false,
+                    false,
+                    null,
+                    null,
+                    true
+                );
+
+                equiRectangularTexture.coordinatesMode = BABYLON.Texture.SKYBOX_MODE;
+                const skyboxMaterial = new BABYLON.StandardMaterial("skyboxMaterial", scene);
+                skyboxMaterial.reflectionTexture = equiRectangularTexture;
+                skyboxMaterial.backFaceCulling = false;
+                const skybox = BABYLON.MeshBuilder.CreateBox("skybox", { size: 1000 }, scene);
+                skybox.material = skyboxMaterial;
+
+                return scene;
+            };
+            const scene = createScene();
+            engine.runRenderLoop(function () {
+                scene.render();
+            });
+            window.addEventListener("resize", function () {
+                engine.resize();
+            });
+        });
+    </script>
+</body>
+</html>
