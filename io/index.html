@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Beautifier</title>
+<script src="https://cdn.jsdelivr.net/npm/js-beautify/js/index.js"></script>
+<style>
+    body {
+        background-color: #36393f;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    textarea {
+        width: 100%;
+        height: 300px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-color: #2f3136;
+        color: #ffffff;
+        resize: none;
+    }
+    #output {
+        margin-top: 20px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #2f3136;
+        overflow: auto;
+    }
+</style>
+</head>
+<body>
+<h1>JavaScript Beautifier</h1>
+<p>Enter your JavaScript code below:</p>
+<textarea id="input"></textarea>
+<button onclick="beautify()">Beautify</button>
+<div id="output"></div>
+
+<script>
+    function beautify() {
+        var inputCode = document.getElementById("input").value;
+        var outputDiv = document.getElementById("output");
+      
+        var beautifiedCode = js_beautify(inputCode, {
+            indent_size: 4,
+            space_in_empty_paren: true,
+            space_after_anon_function: true
+        });
+        
+        outputDiv.textContent = beautifiedCode;
+    }
+</script>
+</body>
+</html>
