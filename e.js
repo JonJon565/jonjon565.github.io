@@ -45752,7 +45752,7 @@ function fp(_0x41f942) {
   }
   if (_0x41f942[11].player !== undefined) {
     _0x4e48d8.wi = _0x41f942[11].player;
-    window.AAF = 4323650;
+    window.AAF = _0x41f942;
   }
   if (_0x41f942[11].killerTeamate !== undefined) {
     _0x4e48d8.killerTeamate = _0x41f942[11].killerTeamate;
