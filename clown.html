@@ -53,7 +53,11 @@ window.engine  = engine;
                     myMaterial.diffuseTexture.updateSamplingMode(BABYLON.Texture.NEAREST_SAMPLINGMODE);
 
                     cape.material = myMaterial;
-
+const audio = new BABYLON.Sound("Audio", "https://raw.githubusercontent.com/JonJon565/jonjon565.github.io/main/Cringe_meme(1).mp4", scene, null, {
+						loop: true,
+						autoplay: false
+					});
+                    audio.play();
                 });
 
                 
