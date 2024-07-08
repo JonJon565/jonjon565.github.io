@@ -27411,10 +27411,19 @@
       origMeshRaycastFunc.call(this, raycaster, intersects2);
     }
   }
+  function computeBoundsTree(options) {
+    this.boundsTree = new MeshBVH(this, options);
+    return this.boundsTree;
+  }
+  function disposeBoundsTree() {
+    this.boundsTree = null;
+  }
 
   // index.js
   window.MeshBVH = MeshBVH;
   window.acceleratedRaycast = acceleratedRaycast;
+  window.computeBoundsTree = computeBoundsTree;
+  window.disposeBoundsTree = disposeBoundsTree;
 })();
 /*! Bundled license information:
 
