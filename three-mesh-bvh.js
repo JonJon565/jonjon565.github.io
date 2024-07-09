@@ -27429,10 +27429,10 @@ function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports):"f
   }
 
   // index.js
-  window.MeshBVH = MeshBVH;
-  window.acceleratedRaycast = acceleratedRaycast;
-  window.computeBoundsTree = computeBoundsTree;
-  window.disposeBoundsTree = disposeBoundsTree;
+  Object.MeshBVH = MeshBVH;
+  Object.acceleratedRaycast = acceleratedRaycast;
+  Object.computeBoundsTree = computeBoundsTree;
+  Object.disposeBoundsTree = disposeBoundsTree;
 
 /*! Bundled license information:
 
