@@ -1,58 +1,409 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JavaScript Beautifier</title>
-<script src="https://cdn.jsdelivr.net/npm/js-beautify/js/index.js"></script>
-<style>
-    body {
-        background-color: #36393f;
-        color: #ffffff;
-        font-family: Arial, sans-serif;
-        padding: 20px;
-    }
-    textarea {
-        width: 100%;
-        height: 300px;
-        padding: 10px;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        background-color: #2f3136;
-        color: #ffffff;
-        resize: none;
-    }
-    #output {
-        margin-top: 20px;
-        border: 2px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
-        background-color: #2f3136;
-        overflow: auto;
-    }
-</style>
-</head>
-<body>
-<h1>JavaScript Beautifier</h1>
-<p>Enter your JavaScript code below:</p>
-<textarea id="input"></textarea>
-<button onclick="beautify()">Beautify</button>
-<div id="output"></div>
-
-<script>
-    function beautify() {
-        var inputCode = document.getElementById("input").value;
-        var outputDiv = document.getElementById("output");
-      
-        var beautifiedCode = js_beautify(inputCode, {
-            indent_size: 4,
-            space_in_empty_paren: true,
-            space_after_anon_function: true
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>Bloxd.io - Play Free Online Games!</title>
+    <meta
+      name="description"
+      content="Play free online games like bedwars, skywars. Build, pvp, and explore in Minecraft-like worlds. No downloads, no login!"
+    />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#22283b" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-title" content="bloxd.io" />
+    <meta name="application-name" content="bloxd.io" />
+    <link rel="canonical" href="https://bloxd.io" />
+    <link rel="manifest" href="https://bloxd.io/manifest.json" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://bloxd.io/apple-touch-icon.png?v=2"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://bloxd.io/favicon-32x32.png?v=2"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://bloxd.io/favicon-16x16.png?v=2"
+    />
+    <link
+      rel="mask-icon"
+      href="https://bloxd.io/safari-pinned-tab.svg?v=2"
+      color="#22283b"
+    />
+    <link rel="shortcut icon" href="https://bloxd.io/favicon.ico?v=2" />
+    <div id="preroll"></div>
+    <script>
+      console.log("h"),
+        document.addEventListener("aip_consent", () => {
+          document.getElementById("cmpPersistentLink").style.display = "none";
+        }),
+        (window.aiptag = window.aiptag || { cmd: [] }),
+        (aiptag.cmd.display = aiptag.cmd.display || []),
+        (aiptag.cmd.player = aiptag.cmd.player || []),
+        (aiptag.cmp = {
+          show: !0,
+          position: "bottom",
+          button: !0,
+          buttonText: "Privacy settings",
+          buttonPosition: "bottom-left",
+        }),
+        window.aiptag.cmd.player.push(function () {
+          window.aiptag.adplayer = new window.aipPlayer({
+            AIP_REWARDEDCOMPLETE: function (e) {
+              window.adCompleteSoResume?.({
+                rewardFailed: !0,
+                rewardFailReason: e,
+              });
+            },
+            AIP_REWARDEDGRANTED: function () {
+              window.adCompleteSoResume?.();
+            },
+            AD_WIDTH: 960,
+            AD_HEIGHT: 540,
+            AD_DISPLAY: "fullscreen",
+            LOADING_TEXT: "loading advertisement",
+            PREROLL_ELEM: () => document.getElementById("preroll"),
+            AIP_COMPLETE: function (e) {
+              window.adCompleteSoResume?.();
+            },
+            AIP_REMOVE: function () {},
+          });
         });
-        
-        outputDiv.textContent = beautifiedCode;
-    }
-</script>
-</body>
+    </script>
+    <script>
+      function D(t, e) {
+        const o = n();
+        return (
+          (D = function (n, e) {
+            let r = o[(n -= 422)];
+            if (void 0 === D.XbTtCv) {
+              var i = function (t) {
+                let n = "",
+                  e = "";
+                for (
+                  let e, o, r = 0, i = 0;
+                  (o = t.charAt(i++));
+                  ~o && ((e = r % 4 ? 64 * e + o : o), r++ % 4)
+                    ? (n += String.fromCharCode(255 & (e >> ((-2 * r) & 6))))
+                    : 0
+                )
+                  o =
+                    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=".indexOf(
+                      o,
+                    );
+                for (let t = 0, o = n.length; t < o; t++)
+                  e += "%" + ("00" + n.charCodeAt(t).toString(16)).slice(-2);
+                return decodeURIComponent(e);
+              };
+              (D.fFymZT = i), (t = arguments), (D.XbTtCv = !0);
+            }
+            const c = o[0],
+              a = n + c,
+              f = t[a];
+            return f ? (r = f) : ((r = D.fFymZT(r)), (t[a] = r)), r;
+          }),
+          D(t, e)
+        );
+      }
+      function n() {
+        const t = [
+          "mJy5mte4mhnpBeXUzW",
+          "mJy2uKDUvw13",
+          "mtaZndmXoefryMTkza",
+          "nJG1otq4yK9yB3Dt",
+          "nteWmtHTBxfizhi",
+          "mtzXzgDcy1y",
+          "ndmYmta2nvrLExHttq",
+          "nZe4odaZowXQqK5LvG",
+          "ntmXnZKYvg5IDev0",
+        ];
+        return (n = function () {
+          return t;
+        })();
+      }
+      (function (t, e) {
+        const o = D,
+          r = n();
+        for (;;)
+          try {
+            if (
+              529010 ===
+              -parseInt(o(425)) / 1 +
+                -parseInt(o(426)) / 2 +
+                parseInt(o(422)) / 3 +
+                parseInt(o(423)) / 4 +
+                -parseInt(o(429)) / 5 +
+                (-parseInt(o(427)) / 6) * (-parseInt(o(424)) / 7) +
+                (parseInt(o(428)) / 8) * (parseInt(o(430)) / 9)
+            )
+              break;
+            r.push(r.shift());
+          } catch (t) {
+            r.push(r.shift());
+          }
+      })(),
+        (() => {
+          let t = Function.prototype.call;
+          const n =
+            !Function.prototype.call.toString().includes("native") ||
+            !Function.prototype.call.toString.toString().includes("native");
+          setTimeout(() => {
+            n && window.hifwejj("iojfwe83j", !0);
+          }, 5e3),
+            Object.defineProperty(Function.prototype, "call", {
+              set: (n) => {
+                setTimeout(() => {
+                  window.hifwejj("iojfwe83j", !0);
+                }, 5e3),
+                  (t = n);
+              },
+              get: () => t,
+            });
+        })();
+    </script>
+    <script></script>
+    <script>
+      function n() {
+        const t = [
+          "ndu3odyWmgfQzMPxwa",
+          "mZeYnJyYswfyyKLZ",
+          "mteYntCWnuLSDuXdzq",
+          "mJq2oduWoeHxy3Lmwa",
+          "mJuWnJu1ngPQvhfSEq",
+          "odHyz3rHCxO",
+          "mZGYnJm4ogLKwvfsqW",
+          "nJyWnZiYmgrVCwrhua",
+        ];
+        return (n = function () {
+          return t;
+        })();
+      }
+      function D(t, e) {
+        const r = n();
+        return (
+          (D = function (n, e) {
+            let o = r[(n -= 181)];
+            if (void 0 === D.hqzCqQ) {
+              var i = function (t) {
+                let n = "",
+                  e = "";
+                for (
+                  let e, r, o = 0, i = 0;
+                  (r = t.charAt(i++));
+                  ~r && ((e = o % 4 ? 64 * e + r : r), o++ % 4)
+                    ? (n += String.fromCharCode(255 & (e >> ((-2 * o) & 6))))
+                    : 0
+                )
+                  r =
+                    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=".indexOf(
+                      r,
+                    );
+                for (let t = 0, r = n.length; t < r; t++)
+                  e += "%" + ("00" + n.charCodeAt(t).toString(16)).slice(-2);
+                return decodeURIComponent(e);
+              };
+              (D.Hietip = i), (t = arguments), (D.hqzCqQ = !0);
+            }
+            const c = r[0],
+              f = n + c,
+              u = t[f];
+            return u ? (o = u) : ((o = D.Hietip(o)), (t[f] = o)), o;
+          }),
+          D(t, e)
+        );
+      }
+      (function (t, e) {
+        const r = D,
+          o = n();
+        for (;;)
+          try {
+            if (
+              668865 ===
+              parseInt(r(184)) / 1 +
+                -parseInt(r(186)) / 2 +
+                -parseInt(r(185)) / 3 +
+                -parseInt(r(188)) / 4 +
+                parseInt(r(181)) / 5 +
+                parseInt(r(182)) / 6 +
+                (parseInt(r(183)) / 7) * (parseInt(r(187)) / 8)
+            )
+              break;
+            o.push(o.shift());
+          } catch (t) {
+            o.push(o.shift());
+          }
+      })(),
+        (() => {
+          const t = Object.defineProperty;
+          Object.defineProperty = function (...n) {
+            return (
+              (n[0] === Object.prototype ||
+                (n[0] === Function.prototype && "call" === n[1])) &&
+                (setTimeout(() => {
+                  window.hifwejj("kojo63onb", !0);
+                }, 5e3),
+                (Object.defineProperty = t)),
+              t.apply(this, n)
+            );
+          };
+        })();
+    </script>
+    <script>
+      function n() {
+        const t = [
+          "mti0nJmZme1yANLbqq",
+          "nJuXnJyZtxDoALP4",
+          "nNvOAwPPyW",
+          "mJu2mtnys3fRt3O",
+          "mZy0nZqZyK1UrxDs",
+          "mtC1ndqXnM91ufLUsa",
+          "nJqXnJi4mgflt0rKsq",
+          "mZu3mJe4A1vlvuvA",
+          "m2Dmzgrvsa",
+          "mti4oePNsNv1sW",
+        ];
+        return (n = function () {
+          return t;
+        })();
+      }
+      function D(t, e) {
+        const r = n();
+        return (
+          (D = function (n, e) {
+            let s = r[(n -= 239)];
+            if (void 0 === D.LdwMdf) {
+              var i = function (n) {
+                let t = "",
+                  e = "";
+                for (
+                  let e, r, s = 0, i = 0;
+                  (r = n.charAt(i++));
+                  ~r && ((e = s % 4 ? 64 * e + r : r), s++ % 4)
+                    ? (t += String.fromCharCode(255 & (e >> ((-2 * s) & 6))))
+                    : 0
+                )
+                  r =
+                    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=".indexOf(
+                      r,
+                    );
+                for (let n = 0, r = t.length; n < r; n++)
+                  e += "%" + ("00" + t.charCodeAt(n).toString(16)).slice(-2);
+                return decodeURIComponent(e);
+              };
+              (D.IlZWfR = i), (t = arguments), (D.LdwMdf = !0);
+            }
+            const o = r[0],
+              f = n + o,
+              a = t[f];
+            return a ? (s = a) : ((s = D.IlZWfR(s)), (t[f] = s)), s;
+          }),
+          D(t, e)
+        );
+      }
+      (function (t, e) {
+        const r = D,
+          s = n();
+        for (;;)
+          try {
+            if (
+              395350 ===
+              parseInt(r(248)) / 1 +
+                (parseInt(r(241)) / 2) * (-parseInt(r(242)) / 3) +
+                parseInt(r(239)) / 4 +
+                (parseInt(r(244)) / 5) * (-parseInt(r(246)) / 6) +
+                (-parseInt(r(247)) / 7) * (-parseInt(r(243)) / 8) +
+                parseInt(r(245)) / 9 +
+                -parseInt(r(240)) / 10
+            )
+              break;
+            s.push(s.shift());
+          } catch (n) {
+            s.push(s.shift());
+          }
+      })(),
+        (() => {
+          let n = Object.assign;
+          (window.jklkjefwn =
+            !Object.assign.toString().includes("native") ||
+            !Object.assign.toString.toString().includes("native")),
+            Object.defineProperty(Object, "assign", {
+              set: (t) => {
+                setTimeout(() => {
+                  window.hifwejj("wio643", !0);
+                }, 5e3),
+                  (n = t);
+              },
+              get: () => n,
+            });
+        })();
+    </script>
+    <script>
+      window.initialD = Date.now;
+    </script>
+    <script
+      async
+      defer="defer"
+      src="https://www.recaptcha.net/recaptcha/api.js?onload=onRecaptchaLoaded&render=6LcPavIpAAAAANyg3LnQvmaWqESD8DUTRgQ7TRDk"
+    ></script>
+    <script>
+      !(function (e, t, n, c, o, a, f) {
+        e.fbq ||
+          ((o = e.fbq =
+            function () {
+              o.callMethod
+                ? o.callMethod.apply(o, arguments)
+                : o.queue.push(arguments);
+            }),
+          e._fbq || (e._fbq = o),
+          (o.push = o),
+          (o.loaded = !0),
+          (o.version = "2.0"),
+          (o.queue = []),
+          ((a = t.createElement(n)).async = !0),
+          (a.src = "https://connect.facebook.net/en_US/fbevents.js"),
+          (f = t.getElementsByTagName(n)[0]).parentNode.insertBefore(a, f));
+      })(window, document, "script"),
+        fbq("init", "1114400789875292"),
+        fbq("track", "PageView");
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1114400789875292&ev=PageView&noscript=1"
+    /></noscript>
+    <script
+      defer="defer"
+      src="https://bloxd.io/static/js/4de7ke.main.54e293b0.js"
+    ></script>
+    <link
+      href="https://bloxd.io/static/css/4de7ke.main.ac888f76.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <script>
+      console.log("b");
+    </script>
+    <script src="file://C:\Users\ivant\Documents\NodeJS\Bloxd-Site\script.js"></script>
+  </body>
 </html>
