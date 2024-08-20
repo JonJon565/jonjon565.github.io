@@ -18,25 +18,25 @@ fetch = function(...args){
     }
     return originalFetch.apply(this, args);
 }
-var originalXMLHttpRequest = XMLHttpRequest;
-XMLHttpRequest = function(...args){
-    if(args[0]?.startsWith('/'))
+var originalXMLHttpRequest = XMLHttpRequest.prototype.open;
+XMLHttpRequest.prototype.open = function(...args){
+    if(args[1]?.startsWith('/'))
     {
-        args[0] = 'https://bloxd.io' + args[0];
+        args[1] = 'https://bloxd.io' + args[1];
     }
-    if(args[0]?.url?.startsWith('/'))
+    if(args[1]?.url?.startsWith('/'))
     {
-        args[0].src = 'https://bloxd.io' + args[0].src;
+        args[1].src = 'https://bloxd.io' + args[1].src;
     }
-    if(args[0].includes('/metrics/cookies'))
+    if(args[1].includes('/metrics/cookies'))
     {
-        args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/metrics/cookies';
+        args[1] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/metrics/cookies';
     }
-    if(args[0].includes('/traffic-code'))
+    if(args[1].includes('/traffic-code'))
     {
-        args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/traffic-code';
+        args[1] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/traffic-code';
     }
-    
+
     return originalXMLHttpRequest.apply(this, args);
 }
 Object.defineProperty(HTMLScriptElement.prototype, 'src', {
