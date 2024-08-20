@@ -38,7 +38,7 @@ XMLHttpRequest.prototype.open = function(...args){
     }
     if(args[1].includes('draco_decoder_gltf_v2'))
     {
-        args[1] = 'https://bloxd.io/static/draco_decoder_gltf_v2.wasm';
+        args[1] = 'https://bloxdmarketplace.com/api/GET?url=https://bloxd.io/static/draco_decoder_gltf_v2.wasm';
     }
     return originalXMLHttpRequest.apply(this, args);
 }
