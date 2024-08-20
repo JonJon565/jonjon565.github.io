@@ -16,6 +16,10 @@ fetch = function(...args){
     {
         args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/traffic-code';
     }
+    if(args[0].includes('draco_decoder_gltf_v2'))
+    {
+        args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/static/draco_decoder_gltf_v2.wasm';
+    }
     return originalFetch.apply(this, args);
 }
 Object.defineProperty(HTMLScriptElement.prototype, 'src', {
