@@ -16,11 +16,28 @@ fetch = function(...args){
     {
         args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/traffic-code';
     }
-    if(args[0].includes('draco_decoder_gltf_v2'))
-    {
-        args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/static/draco_decoder_gltf_v2.wasm';
-    }
     return originalFetch.apply(this, args);
+}
+var originalXMLHttpRequest = XMLHttpRequest;
+XMLHttpRequest = function(...args){
+    if(args[0]?.startsWith('/'))
+    {
+        args[0] = 'https://bloxd.io' + args[0];
+    }
+    if(args[0]?.url?.startsWith('/'))
+    {
+        args[0].src = 'https://bloxd.io' + args[0].src;
+    }
+    if(args[0].includes('/metrics/cookies'))
+    {
+        args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/metrics/cookies';
+    }
+    if(args[0].includes('/traffic-code'))
+    {
+        args[0] = 'https://bloxdmarketplace.com/api/POST?url=https://bloxd.io/traffic-code';
+    }
+    
+    return originalXMLHttpRequest.apply(this, args);
 }
 Object.defineProperty(HTMLScriptElement.prototype, 'src', {
     set: function(value) {
